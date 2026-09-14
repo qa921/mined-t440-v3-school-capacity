@@ -1,0 +1,12 @@
+[
+  {
+    "market": "LU",
+    "label_en": "Luxembourg",
+    "label_nl": "Luxemburg"
+  },
+  {
+    "market": "DK",
+    "label_en": "Denmark",
+    "label_nl": "Denemarken"
+  }
+]
