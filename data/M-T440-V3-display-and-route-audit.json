@@ -1,0 +1,47 @@
+{
+  "task": "M-T440-V3",
+  "status": "input fixtures only — not a completed implementation",
+  "recorded_at": "2026-09-15T04:44:00Z",
+  "concept_contract": {
+    "baseline": "observed current school-seat pressure for the selected market",
+    "control": "planner-selected capacity addition assumption",
+    "output": "projected seat-pressure scenario; not a measured outcome",
+    "diagram_order": ["Observed baseline", "Planner assumption", "Projected scenario"]
+  },
+  "display_patterns": [
+    {"id":"D01","route":"/","lang":"en","market":"NL","market_label":"Netherlands","baseline":"Observed current seat pressure","control":"Planned capacity addition","output":"Projected seat pressure","copy_note":"Keep the panel order explicit."},
+    {"id":"D02","route":"/","lang":"nl","market":"NL","market_label":"Nederland","baseline":"Gemeten huidige plaatsdruk","control":"Gekozen capaciteitsuitbreiding","output":"Verwachte plaatsdruk","copy_note":"No English label may remain in the visible legend."},
+    {"id":"D03","route":"/","lang":"en","market":"DE","market_label":"Germany","baseline":"Observed current seat pressure","control":"Planned capacity addition","output":"Projected seat pressure","copy_note":"Market is context, not a language setting."},
+    {"id":"D04","route":"/","lang":"nl","market":"DE","market_label":"Duitsland","baseline":"Gemeten huidige plaatsdruk","control":"Gekozen capaciteitsuitbreiding","output":"Verwachte plaatsdruk","copy_note":"Dutch copy with German market retained."},
+    {"id":"D05","route":"/","lang":"en","market":"LU","market_label":"Luxembourg","baseline":"Observed current seat pressure","control":"Planned capacity addition","output":"Projected seat pressure","copy_note":"LU comes from turn2-locale-additions.json."},
+    {"id":"D06","route":"/","lang":"nl","market":"LU","market_label":"Luxemburg","baseline":"Gemeten huidige plaatsdruk","control":"Gekozen capaciteitsuitbreiding","output":"Verwachte plaatsdruk","copy_note":"Do not substitute NL while changing language."},
+    {"id":"D07","route":"/","lang":"en","market":"DK","market_label":"Denmark","baseline":"Observed current seat pressure","control":"Planned capacity addition","output":"Projected seat pressure","copy_note":"DK comes from turn2-locale-additions.json."},
+    {"id":"D08","route":"/","lang":"nl","market":"DK","market_label":"Denemarken","baseline":"Gemeten huidige plaatsdruk","control":"Gekozen capaciteitsuitbreiding","output":"Verwachte plaatsdruk","copy_note":"Keep short enough for narrow controls."}
+  ],
+  "route_cases": [
+    {"id":"R01","from":"/?lang=en&market=NL","action":"language:nl","expected":"/?lang=nl&market=NL","current_gap":"app only changes document.lang; no URL or copy update"},
+    {"id":"R02","from":"/?lang=en&market=DE","action":"language:nl","expected":"/?lang=nl&market=DE","current_gap":"DE must survive language switch"},
+    {"id":"R03","from":"/?lang=en&market=LU","action":"language:nl","expected":"/?lang=nl&market=LU","current_gap":"LU is absent from current selector"},
+    {"id":"R04","from":"/?lang=en&market=DK","action":"language:nl","expected":"/?lang=nl&market=DK","current_gap":"DK is absent from current selector"},
+    {"id":"R05","from":"/explainer/?lang=en&market=NL","action":"language:nl","expected":"/explainer/?lang=nl&market=NL","current_gap":"explainer has no controls or script"},
+    {"id":"R06","from":"/explainer/?lang=en&market=DE","action":"language:nl","expected":"/explainer/?lang=nl&market=DE","current_gap":"explainer has no controls or script"},
+    {"id":"R07","from":"/explainer/?lang=en&market=LU","action":"language:nl","expected":"/explainer/?lang=nl&market=LU","current_gap":"explainer has no controls or script"},
+    {"id":"R08","from":"/explainer/?lang=en&market=DK","action":"language:nl","expected":"/explainer/?lang=nl&market=DK","current_gap":"explainer has no controls or script"},
+    {"id":"R09","from":"/?lang=en&market=NL","action":"market:DE","expected":"/?lang=en&market=DE","current_gap":"market control has no handler"},
+    {"id":"R10","from":"/?lang=nl&market=NL","action":"market:DE","expected":"/?lang=nl&market=DE","current_gap":"market control has no handler"},
+    {"id":"R11","from":"/?lang=en&market=DE","action":"market:LU","expected":"/?lang=en&market=LU","current_gap":"LU is not rendered"},
+    {"id":"R12","from":"/?lang=nl&market=DE","action":"market:LU","expected":"/?lang=nl&market=LU","current_gap":"LU is not rendered"},
+    {"id":"R13","from":"/?lang=en&market=LU","action":"market:DK","expected":"/?lang=en&market=DK","current_gap":"DK is not rendered"},
+    {"id":"R14","from":"/?lang=nl&market=LU","action":"market:DK","expected":"/?lang=nl&market=DK","current_gap":"DK is not rendered"},
+    {"id":"R15","from":"/explainer/?lang=en&market=NL","action":"market:DE","expected":"/explainer/?lang=en&market=DE","current_gap":"explainer lacks market control"},
+    {"id":"R16","from":"/explainer/?lang=nl&market=NL","action":"market:DE","expected":"/explainer/?lang=nl&market=DE","current_gap":"explainer lacks market control"},
+    {"id":"R17","from":"/?lang=en&market=NL&utm_source=partner","action":"open-explainer","expected":"/explainer/?lang=en&market=NL&utm_source=partner","current_gap":"home has no explainer link"},
+    {"id":"R18","from":"/?lang=nl&market=DE&ref=brief","action":"open-explainer","expected":"/explainer/?lang=nl&market=DE&ref=brief","current_gap":"home has no explainer link"},
+    {"id":"R19","from":"/explainer/?lang=en&market=LU&utm_source=partner","action":"open-home","expected":"/?lang=en&market=LU&utm_source=partner","current_gap":"explainer has no home link"},
+    {"id":"R20","from":"/explainer/?lang=nl&market=DK&ref=brief","action":"open-home","expected":"/?lang=nl&market=DK&ref=brief","current_gap":"explainer has no home link"},
+    {"id":"R21","from":"/?market=DE","action":"load","expected":"/?market=DE with lang=en","current_gap":"no query hydration"},
+    {"id":"R22","from":"/?lang=nl","action":"load","expected":"/?lang=nl with market=NL","current_gap":"no query hydration"},
+    {"id":"R23","from":"/explainer/?market=LU","action":"load","expected":"/explainer/?market=LU with lang=en","current_gap":"no query hydration"},
+    {"id":"R24","from":"/?lang=fr&market=DE","action":"load","expected":"safe fallback lang=en while retaining market=DE","current_gap":"fallback behavior is undecided; record choice in handoff"}
+  ]
+}
