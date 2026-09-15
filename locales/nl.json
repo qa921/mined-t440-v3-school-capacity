@@ -1,5 +1,24 @@
 {
   "title": "Planning van schoolcapaciteit",
-  "intro": "Pas het scenario aan om een indicatieve basislijn met een voorgesteld pad te vergelijken.",
-  "explainer": "Planning van schoolcapaciteit: uitleg van de simulatie"
+  "intro": "Pas het scenario aan om een indicatieve basislijn met een voorgestelde pad te vergelijken.",
+  "explainer": "Planning van schoolcapaciteit: uitleg van de simulatie",
+  "label_language": "Taal",
+  "label_market": "Markt",
+  "market_NL": "Nederland",
+  "market_DE": "Duitsland",
+  "market_LU": "Luxemburg",
+  "market_DK": "Denemarken",
+  "panel_observed": "Gemeten huidige plaatsdruk",
+  "panel_assumption": "Gekozen capaciteitsuitbreiding",
+  "panel_projected": "Verwachte plaatsdruk",
+  "legend_observed": "Gemeten basislijn voor de gekozen markt",
+  "legend_assumption": "Door de planner gekozen veronderstelling voor capaciteitsuitbreiding",
+  "legend_projected": "Verwacht scenario — geen gemeten resultaat",
+  "aria_diagram": "Diagram met drie stappen op volgorde: gemeten huidige plaatsdruk, gekozen capaciteitsuitbreiding, verwachte plaatsdruk. De verwachting is een scenario, geen gemeten resultaat.",
+  "nav_explainer": "Uitleg van de simulatie",
+  "nav_home": "Terug naar het diagram",
+  "explainer_intro": "Deze pagina legt uit hoe je de simulatie van schoolcapaciteit leest.",
+  "explainer_observed": "Stap 1 — Gemeten huidige plaatsdruk: de gemeten basislijn voor de gekozen markt.",
+  "explainer_assumption": "Stap 2 — Gekozen capaciteitsuitbreiding: een veronderstelling die je als planner zelf kiest.",
+  "explainer_projected": "Stap 3 — Verwachte plaatsdruk: een gemodelleerd scenario, nooit een gemeten resultaat."
 }

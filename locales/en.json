@@ -1,5 +1,24 @@
 {
   "title": "School capacity planning",
   "intro": "Adjust the scenario to compare an indicative baseline and proposed pathway.",
-  "explainer": "School capacity planning: how to read the simulation"
+  "explainer": "School capacity planning: how to read the simulation",
+  "label_language": "Language",
+  "label_market": "Market",
+  "market_NL": "Netherlands",
+  "market_DE": "Germany",
+  "market_LU": "Luxembourg",
+  "market_DK": "Denmark",
+  "panel_observed": "Observed current seat pressure",
+  "panel_assumption": "Planned capacity addition",
+  "panel_projected": "Projected seat pressure",
+  "legend_observed": "Observed baseline for the selected market",
+  "legend_assumption": "Planner-selected capacity-addition assumption",
+  "legend_projected": "Projected scenario — not a measured outcome",
+  "aria_diagram": "Diagram with three steps in order: observed current seat pressure, planned capacity addition, projected seat pressure. The projection is a scenario, not a measured outcome.",
+  "nav_explainer": "How to read the simulation",
+  "nav_home": "Back to the diagram",
+  "explainer_intro": "This page explains how to read the school capacity simulation.",
+  "explainer_observed": "Step 1 — Observed current seat pressure: the measured baseline for the selected market.",
+  "explainer_assumption": "Step 2 — Planned capacity addition: an assumption you control as a planner.",
+  "explainer_projected": "Step 3 — Projected seat pressure: a modeled scenario, never a measured outcome."
 }

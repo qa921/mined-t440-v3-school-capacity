@@ -1,1 +1,42 @@
-<!doctype html><html lang='en'><head><meta charset='utf-8'><title>School capacity planning</title></head><body><main><h1 data-i18n='title'>School capacity planning</h1><p data-i18n='intro'>Adjust the scenario to compare an indicative baseline and proposed pathway.</p><div id='visual' role='img' aria-label='Scenario diagram placeholder'>Baseline → pathway</div><label>Language <select id='lang'><option value='en'>EN</option><option value='nl'>NL</option></select></label><label>Market <select id='market'><option>NL</option><option>DE</option></select></label></main><script src='app.js'></script></body></html>
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>School capacity planning</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:2rem;color:#1a1a1a;background:#fff}
+.controls{margin:1rem 0}
+.controls label{margin-right:1.25rem}
+ol.diagram{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:0.25rem;padding:0;margin:1rem 0}
+ol.diagram li.panel{display:flex;align-items:center}
+ol.diagram .box{border:1px solid #8a8a8a;border-radius:4px;padding:0.75rem 1rem;background:#fff}
+ol.diagram li.panel:not(:last-child)::after{content:'\2192';margin:0 0.5rem;color:#555}
+ul.legend{margin:1rem 0;padding-left:1.25rem;color:#333}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+</style>
+</head>
+<body data-title-key='title'>
+<main>
+<h1 data-i18n='title'>School capacity planning</h1>
+<p data-i18n='intro'>Adjust the scenario to compare an indicative baseline and proposed pathway.</p>
+<div class='controls'>
+<label><span data-i18n='label_language'>Language</span> <select id='lang'></select></label>
+<label><span data-i18n='label_market'>Market</span> <select id='market'></select></label>
+</div>
+<ol class='diagram' id='visual' aria-describedby='diagram-desc'>
+<li class='panel'><span class='box' data-i18n='panel_observed'>Observed current seat pressure</span></li>
+<li class='panel'><span class='box' data-i18n='panel_assumption'>Planned capacity addition</span></li>
+<li class='panel'><span class='box' data-i18n='panel_projected'>Projected seat pressure</span></li>
+</ol>
+<p id='diagram-desc' class='visually-hidden' data-i18n='aria_diagram'>Diagram with three steps in order: observed current seat pressure, planned capacity addition, projected seat pressure. The projection is a scenario, not a measured outcome.</p>
+<ul class='legend'>
+<li data-i18n='legend_observed'>Observed baseline for the selected market</li>
+<li data-i18n='legend_assumption'>Planner-selected capacity-addition assumption</li>
+<li data-i18n='legend_projected'>Projected scenario — not a measured outcome</li>
+</ul>
+<p><a data-nav='explainer' href='explainer/'><span data-i18n='nav_explainer'>How to read the simulation</span></a></p>
+</main>
+<script src='app.js'></script>
+</body>
+</html>
